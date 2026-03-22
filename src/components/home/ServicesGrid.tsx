@@ -66,7 +66,7 @@ const ServicesGrid = () => (
             >
               <GlowingEffect spread={40} glow proximity={64} inactiveZone={0.01} borderWidth={2} disabled={false} />
               <div
-                className={`relative z-10 rounded-2xl p-5 md:p-8 bg-gradient-to-b ${c.gradient}`}
+                className={`relative z-10 rounded-2xl p-5 md:p-8 bg-linear-to-b ${c.gradient}`}
                 style={{
                   backgroundColor: "rgba(17, 24, 17, 0.9)",
                   border: c.popular ? "1px solid rgba(29,185,84,0.4)" : "1px solid rgba(26,46,26,0.8)",
@@ -161,7 +161,7 @@ const ServicesGrid = () => (
                 <ul className="space-y-2 mb-6">
                   {c.bullets.map((b, j) => (
                     <li key={j} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Check className="text-primary flex-shrink-0" size={14} />
+                      <Check className="text-primary shrink-0" size={14} />
                       {b}
                     </li>
                   ))}

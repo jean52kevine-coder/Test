@@ -36,7 +36,7 @@ export function Spotlight({
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className={cn("absolute inset-0 z-[1] pointer-events-auto", className)}
+      className={cn("absolute inset-0 z-1 pointer-events-auto", className)}
     >
       <motion.div
         className="absolute inset-0 pointer-events-none"

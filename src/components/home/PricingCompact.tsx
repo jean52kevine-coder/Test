@@ -84,7 +84,7 @@ const PricingCompact = () => (
                 <ul className="space-y-2 flex-1 mb-6">
                   {p.features.map((f, j) => (
                     <li key={j} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Check className="text-primary flex-shrink-0" size={14} />
+                      <Check className="text-primary shrink-0" size={14} />
                       {f}
                     </li>
                   ))}

@@ -27,7 +27,7 @@ export function Marquee({
       <div
         className={cn(
           "flex shrink-0 gap-6 animate-marquee",
-          pauseOnHover && "group-hover:[animation-play-state:paused]"
+          pauseOnHover && "group-hover:paused"
         )}
         style={{
           animationDuration: `${speed}s`,
@@ -39,7 +39,7 @@ export function Marquee({
       <div
         className={cn(
           "flex shrink-0 gap-6 animate-marquee",
-          pauseOnHover && "group-hover:[animation-play-state:paused]"
+          pauseOnHover && "group-hover:paused"
         )}
         aria-hidden
         style={{

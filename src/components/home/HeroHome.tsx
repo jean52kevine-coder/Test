@@ -48,16 +48,16 @@ const HeroHome = () => (
 
     {/* Glow orbs */}
     <div
-      className="absolute top-[-200px] left-[-100px] w-[600px] h-[600px] rounded-full pointer-events-none z-[1]"
+      className="absolute top-[-200px] left-[-100px] w-[600px] h-[600px] rounded-full pointer-events-none z-1"
       style={{ background: "hsl(var(--primary) / 0.06)", filter: "blur(120px)" }}
     />
     <div
-      className="absolute bottom-[-150px] right-[-80px] w-[500px] h-[500px] rounded-full pointer-events-none z-[1]"
+      className="absolute bottom-[-150px] right-[-80px] w-[500px] h-[500px] rounded-full pointer-events-none z-1"
       style={{ background: "hsl(var(--primary) / 0.04)", filter: "blur(100px)" }}
     />
 
     {/* Vignette */}
-    <div className="absolute inset-0 pointer-events-none z-[2]" style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%)" }} />
+    <div className="absolute inset-0 pointer-events-none z-2" style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%)" }} />
 
     <div className="section-container relative z-10 py-10 md:py-20 flex flex-col items-center text-center">
       <BlurReveal delay={0}>

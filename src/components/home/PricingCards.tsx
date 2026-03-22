@@ -33,7 +33,7 @@ const PricingCards = () => (
           >
             {p.best ? (
               <div className="relative flex flex-col">
-                <div className="flex justify-center mb-[-1px]">
+                <div className="flex justify-center -mb-px">
                   <div className="inline-flex items-center gap-2 bg-[#0a0f0a] border border-[#1DB954]/60 rounded-t-xl px-5 py-2 shadow-[0_0_20px_rgba(29,185,84,0.25)]">
                     <span className="relative flex h-2 w-2 shrink-0">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1DB954] opacity-70" />
@@ -45,7 +45,7 @@ const PricingCards = () => (
                   </div>
                 </div>
                 <div className="border-2 border-[#1DB954]/50 rounded-2xl rounded-tl-none bg-[#0d1a0d] p-8 flex flex-col gap-6 shadow-[0_0_60px_rgba(29,185,84,0.12)] hover:shadow-[0_0_80px_rgba(29,185,84,0.18)] transition-shadow duration-300 group">
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
                   <div className="relative">
                     <p className="text-white/50 text-sm font-medium uppercase tracking-widest mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                       {p.title}
@@ -60,7 +60,7 @@ const PricingCards = () => (
                       <p.Icon className="text-[#1DB954]" size={20} />
                     </div>
                   </div>
-                  <div className="h-px bg-gradient-to-r from-transparent via-[#1DB954]/20 to-transparent" />
+                  <div className="h-px bg-linear-to-r from-transparent via-[#1DB954]/20 to-transparent" />
                   <ul className="flex flex-col gap-3 flex-1">
                     {p.features.map((f, j) => (
                       <li key={j} className="flex items-start gap-3 text-sm text-white/65" style={{ fontFamily: "'DM Sans', sans-serif" }}>
@@ -81,7 +81,7 @@ const PricingCards = () => (
               </div>
             ) : (
             <div className="relative w-full rounded-2xl p-8 flex flex-col gap-6 transition-all duration-300 group bg-[#0d130d] border border-[#1a2e1a] hover:border-[#1DB954]/30 hover:shadow-[0_0_40px_rgba(29,185,84,0.08)]">
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
 
               <div className="relative">
                 <p className="text-white/50 text-sm font-medium uppercase tracking-widest mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
@@ -98,7 +98,7 @@ const PricingCards = () => (
                 </div>
               </div>
 
-              <div className="h-px bg-gradient-to-r from-transparent via-[#1DB954]/20 to-transparent" />
+              <div className="h-px bg-linear-to-r from-transparent via-[#1DB954]/20 to-transparent" />
 
               <ul className="flex flex-col gap-3 flex-1">
                 {p.features.map((f, j) => (

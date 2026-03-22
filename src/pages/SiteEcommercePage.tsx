@@ -63,7 +63,7 @@ const FAQItem = ({ faq, index }: { faq: { q: string; a: string }; index: number 
         <GlowingEffect spread={30} glow proximity={50} inactiveZone={0.01} borderWidth={2} disabled={false} />
         <button onClick={() => setOpen(!open)} className="relative z-10 w-full text-left rounded-xl p-5 flex items-center justify-between" style={{ backgroundColor: "hsl(var(--card-dark))", border: "1px solid hsl(var(--border-green))" }}>
           <h3 className="font-display font-bold text-foreground pr-4">{faq.q}</h3>
-          <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }} className="text-primary flex-shrink-0">▼</motion.span>
+          <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }} className="text-primary shrink-0">▼</motion.span>
         </button>
       </div>
       <motion.div initial={false} animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
@@ -117,7 +117,7 @@ const SiteEcommercePage = () => {
       {/* Hero */}
     <section className="relative min-h-[65vh] flex items-center overflow-hidden bg-[#0a0f0a]">
       <HeroBackground variant="dataflow" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-1" />
       <div className="relative z-10 container mx-auto px-6 py-12 md:py-24 flex flex-col md:flex-row items-center gap-10">
         <div className="text-center lg:text-left flex-1">
           <BlurReveal>
@@ -164,7 +164,7 @@ const SiteEcommercePage = () => {
               <StaggerContainer className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-4" staggerDelay={0.08}>
                 {inclus.map((item, i) => (
                   <motion.div key={i} className="flex items-center gap-3" variants={itemVariants}>
-                    <Check className="text-primary flex-shrink-0" size={20} /><span className="text-foreground text-sm">{item}</span>
+                    <Check className="text-primary shrink-0" size={20} /><span className="text-foreground text-sm">{item}</span>
                   </motion.div>
                 ))}
               </StaggerContainer>
@@ -262,12 +262,12 @@ const SiteEcommercePage = () => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Link to="/services/site-vitrine" className="group inline-flex items-center justify-center gap-2.5 border border-white/15 hover:border-[#1DB954]/40 text-white/70 hover:text-white font-medium px-7 py-4 rounded-xl transition-all duration-200 hover:bg-white/[0.03] text-sm backdrop-blur-sm" style={{fontFamily:"'DM Sans', sans-serif"}}>
+            <Link to="/services/site-vitrine" className="group inline-flex items-center justify-center gap-2.5 border border-white/15 hover:border-[#1DB954]/40 text-white/70 hover:text-white font-medium px-7 py-4 rounded-xl transition-all duration-200 hover:bg-white/3 text-sm backdrop-blur-xs" style={{fontFamily:"'DM Sans', sans-serif"}}>
               <span>Choisir Vitrine</span>
               <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1 opacity-50 group-hover:opacity-100" />
             </Link>
             <Link to="/contact?service=ecommerce" className="group relative inline-flex items-center justify-center gap-2.5 bg-[#1DB954] hover:bg-[#17a349] text-black font-bold px-7 py-4 rounded-xl transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(29,185,84,0.4)] active:scale-[0.98] overflow-hidden text-sm" style={{fontFamily:"'DM Sans', sans-serif"}}>
-              <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12" />
               <span className="relative">Choisir E-commerce</span>
               <ArrowRight size={16} className="relative transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
             </Link>

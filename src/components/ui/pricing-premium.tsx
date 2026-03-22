@@ -147,7 +147,7 @@ export function Pricing({
             <ul className="space-y-3 flex-1 mb-6">
               {plan.features.map((feature, idx) => (
                 <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                  <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                   <span>{feature}</span>
                 </li>
               ))}
@@ -157,7 +157,7 @@ export function Pricing({
               to={plan.href}
               className={cn(
                 buttonVariants({
-                  variant: plan.isPopular ? "default" : "outline",
+                  variant: plan.isPopular ? "default" : "outline-solid",
                   size: "lg",
                 }),
                 "w-full font-bold"

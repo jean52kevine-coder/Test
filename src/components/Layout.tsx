@@ -15,7 +15,7 @@ const Layout = ({ children }: { children: ReactNode }) => (
       <BackgroundPaths />
     </Suspense>
     <Navbar />
-    <main className="flex-1 pt-16 md:pt-20 pb-16 sm:pb-0 relative z-[1]">{children}</main>
+    <main className="flex-1 pt-16 md:pt-20 pb-16 sm:pb-0 relative z-1">{children}</main>
     <Suspense fallback={null}>
       <Footer />
     </Suspense>

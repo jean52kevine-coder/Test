@@ -202,7 +202,7 @@ const ChatBot = () => {
                   className={`flex gap-2 ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   {msg.role === "assistant" && (
-                    <div className="w-7 h-7 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center mt-1">
+                    <div className="w-7 h-7 rounded-full bg-primary/20 shrink-0 flex items-center justify-center mt-1">
                       <Bot size={14} className="text-primary" />
                     </div>
                   )}
@@ -230,7 +230,7 @@ const ChatBot = () => {
                     )}
                   </div>
                   {msg.role === "user" && (
-                    <div className="w-7 h-7 rounded-full bg-primary/10 flex-shrink-0 flex items-center justify-center mt-1">
+                    <div className="w-7 h-7 rounded-full bg-primary/10 shrink-0 flex items-center justify-center mt-1">
                       <User size={14} className="text-primary" />
                     </div>
                   )}
@@ -239,7 +239,7 @@ const ChatBot = () => {
 
               {isLoading && messages[messages.length - 1]?.role === "user" && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex gap-2">
-                  <div className="w-7 h-7 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-full bg-primary/20 shrink-0 flex items-center justify-center">
                     <Bot size={14} className="text-primary" />
                   </div>
                   <div className="px-3 py-2 rounded-xl text-sm" style={{ backgroundColor: "hsl(var(--secondary))" }}>
@@ -268,7 +268,7 @@ const ChatBot = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Posez votre question..."
-                className="flex-1 bg-secondary/50 rounded-lg px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:ring-1 focus:ring-primary/50"
+                className="flex-1 bg-secondary/50 rounded-lg px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground outline-hidden focus:ring-1 focus:ring-primary/50"
                 disabled={isLoading}
               />
               <button

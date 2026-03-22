@@ -95,7 +95,7 @@ const FAQItem = ({ faq, index }: { faq: { q: string; a: string }; index: number 
         <GlowingEffect spread={30} glow proximity={50} inactiveZone={0.01} borderWidth={2} disabled={false} />
         <button onClick={() => setOpen(!open)} className="relative z-10 w-full text-left rounded-xl p-5 flex items-center justify-between" style={{ backgroundColor: "hsl(var(--card-dark))", border: "1px solid hsl(var(--border-green))" }}>
           <h3 className="font-display font-bold text-foreground pr-4">{faq.q}</h3>
-          <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }} className="text-primary flex-shrink-0">▼</motion.span>
+          <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }} className="text-primary shrink-0">▼</motion.span>
         </button>
       </div>
       <motion.div initial={false} animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
@@ -149,7 +149,7 @@ const SiteVitrinePage = () => {
       {/* Hero */}
     <section className="relative min-h-[65vh] flex items-center overflow-hidden bg-[#0a0f0a]">
       <HeroBackground variant="constellation" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-1" />
       <div className="relative z-10 container mx-auto px-6 py-12 md:py-24 flex flex-col md:flex-row items-center gap-10">
         <div className="text-center lg:text-left flex-1">
           <BlurReveal>
@@ -196,7 +196,7 @@ const SiteVitrinePage = () => {
               <StaggerContainer className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-4" staggerDelay={0.08}>
                 {inclus.map((item, i) => (
                   <motion.div key={i} className="flex items-center gap-3" variants={itemVariants}>
-                    <Check className="text-primary flex-shrink-0" size={20} /><span className="text-foreground text-sm">{item}</span>
+                    <Check className="text-primary shrink-0" size={20} /><span className="text-foreground text-sm">{item}</span>
                   </motion.div>
                 ))}
               </StaggerContainer>
@@ -218,7 +218,7 @@ const SiteVitrinePage = () => {
               <motion.div key={i} className="relative rounded-xl" variants={itemVariants}>
                 <GlowingEffect spread={30} glow proximity={50} inactiveZone={0.01} borderWidth={2} disabled={false} />
                 <div className="relative z-10 flex items-center gap-3 px-5 py-3 rounded-xl border border-border bg-card transition-all hover:border-primary/40">
-                  <c.icon className="text-primary flex-shrink-0" size={18} /><span className="text-sm text-muted-foreground">{c.label}</span>
+                  <c.icon className="text-primary shrink-0" size={18} /><span className="text-sm text-muted-foreground">{c.label}</span>
                 </div>
               </motion.div>
             ))}

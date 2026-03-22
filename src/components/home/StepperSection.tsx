@@ -80,7 +80,7 @@ const StepperSection = () => {
                 className="flex items-center gap-4 w-full text-left"
               >
                 <span
-                  className="font-display font-black text-2xl flex-shrink-0 transition-colors"
+                  className="font-display font-black text-2xl shrink-0 transition-colors"
                   style={{ color: i === active ? "hsl(145, 63%, 42%)" : "rgba(255,255,255,0.2)" }}
                 >
                   {s.num}

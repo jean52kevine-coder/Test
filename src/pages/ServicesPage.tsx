@@ -165,7 +165,7 @@ const ServicesPage = () => (
       <div className="absolute inset-0 opacity-35 pointer-events-none">
         <ShaderBackground />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-1" />
       <div className="relative z-10 container mx-auto px-6 py-12 md:py-24 text-center">
         <BlurReveal>
           <h1 className="heading-display text-3xl sm:text-4xl md:text-6xl mb-6">
@@ -241,7 +241,7 @@ const ServicesPage = () => (
                   >
                     {/* Glow interne sur featured */}
                     {service.featured && (
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-32 bg-primary/[0.08] rounded-full blur-3xl pointer-events-none" />
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-32 bg-primary/8 rounded-full blur-3xl pointer-events-none" />
                     )}
 
                     {/* Header */}
@@ -283,8 +283,8 @@ const ServicesPage = () => (
                     {/* Séparateur */}
                     <div className={`h-px mb-6
                       ${service.featured
-                        ? 'bg-gradient-to-r from-transparent via-primary/30 to-transparent'
-                        : 'bg-gradient-to-r from-transparent via-white/[0.08] to-transparent'
+                        ? 'bg-linear-to-r from-transparent via-primary/30 to-transparent'
+                        : 'bg-linear-to-r from-transparent via-white/8 to-transparent'
                       }`}
                     />
 
@@ -312,7 +312,7 @@ const ServicesPage = () => (
                         }`}
                     >
                       {service.featured && (
-                        <div className="absolute inset-0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+                        <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12" />
                       )}
                       <span className="relative">{service.cta}</span>
                       <ArrowRight size={14} className="relative transition-transform duration-200 group-hover/btn:translate-x-0.5" strokeWidth={2.5} />

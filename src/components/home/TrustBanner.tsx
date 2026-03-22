@@ -31,7 +31,7 @@ const TrustBanner = () => (
   <section className="py-24 relative overflow-hidden">
     {/* Background glow */}
     <div className="absolute inset-0 z-0">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0a] via-[#0d130d]/70 to-[#0a0f0a]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0a0f0a] via-[#0d130d]/70 to-[#0a0f0a]" />
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, hsl(var(--background)) 0%, transparent 20%, transparent 80%, hsl(var(--background)) 100%)" }} />
     </div>
 

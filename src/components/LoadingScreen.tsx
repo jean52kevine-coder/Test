@@ -30,7 +30,7 @@ export default function LoadingScreen() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#0a0f0a]"
+          className="fixed inset-0 z-9999 flex flex-col items-center justify-center bg-[#0a0f0a]"
         >
           <motion.div
             initial={{ scale: 0.7, opacity: 0 }}
@@ -82,14 +82,14 @@ export default function LoadingScreen() {
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.5, delay: 0.9, ease: 'easeOut' }}
               style={{ originX: 0 }}
-              className="w-48 h-[2px] bg-gradient-to-r from-transparent via-[#1DB954] to-transparent mt-2"
+              className="w-48 h-[2px] bg-linear-to-r from-transparent via-[#1DB954] to-transparent mt-2"
             />
 
             <motion.div
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.5 }}
-              className="w-[min(88vw,560px)] rounded-xl border border-[#1DB954]/20 bg-black/20 px-4 py-3 backdrop-blur-sm"
+              className="w-[min(88vw,560px)] rounded-xl border border-[#1DB954]/20 bg-black/20 px-4 py-3 backdrop-blur-xs"
             >
               {LOADER_LOGS.map((line, index) => (
                 <motion.p

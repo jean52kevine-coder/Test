@@ -38,7 +38,7 @@ const FAQItem = ({ faq, index }: { faq: { q: string; a: string }; index: number 
           style={{ backgroundColor: "hsl(var(--card-dark))", border: "1px solid hsl(var(--border-green))" }}
         >
           <h3 className="font-display font-bold text-foreground pr-4">{faq.q}</h3>
-          <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }} className="text-primary flex-shrink-0">▼</motion.span>
+          <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }} className="text-primary shrink-0">▼</motion.span>
         </button>
       </div>
       <motion.div initial={false} animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
@@ -77,7 +77,7 @@ const TarifsPage = () => {
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <ShaderBackground />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-1" />
       <div className="relative z-10 container mx-auto px-6 py-12 md:py-24 text-center">
         <BlurReveal>
           <span

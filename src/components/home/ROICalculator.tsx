@@ -185,7 +185,7 @@ const ROICalculator = () => {
                 whileHover={{ scale: 1.02, y: -4 }}
                 className={`p-6 rounded-xl transition-all duration-300 ${
                   stat.highlight 
-                    ? "bg-gradient-to-br from-primary/20 to-primary/5 border-primary/30" 
+                    ? "bg-linear-to-br from-primary/20 to-primary/5 border-primary/30" 
                     : "bg-white/5 border-white/10"
                 }`}
                 style={{ border: "1px solid" }}

@@ -115,10 +115,10 @@ const HeroSection = () => {
         <Spotlight fill="rgba(29,185,84,0.08)" fillSecondary="rgba(29,185,84,0.04)" />
 
         {/* Vignette */}
-        <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%)" }} />
+        <div className="absolute inset-0 pointer-events-none z-1" style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%)" }} />
 
         {/* Hero content */}
-        <motion.div className="relative z-[2] section-container py-20 flex flex-col lg:flex-row items-center gap-10" style={{ opacity: textOpacity, y: textY }}>
+        <motion.div className="relative z-2 section-container py-20 flex flex-col lg:flex-row items-center gap-10" style={{ opacity: textOpacity, y: textY }}>
           {/* Left: text content */}
           <div className="text-center lg:text-left flex-1">
           {/* Badge */}
@@ -164,7 +164,7 @@ const HeroSection = () => {
           <BlurReveal delay={0.4}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
               <Link to="/contact" className="btn-primary text-center">Demander un devis →</Link>
-              <Link to="/tarifs" className="inline-flex items-center justify-center font-bold px-7 py-3.5 rounded-lg transition-all duration-200 text-white hover:text-primary backdrop-blur-sm" style={{ border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.05)" }}>
+              <Link to="/tarifs" className="inline-flex items-center justify-center font-bold px-7 py-3.5 rounded-lg transition-all duration-200 text-white hover:text-primary backdrop-blur-xs" style={{ border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.05)" }}>
                 Voir les tarifs
               </Link>
             </div>
@@ -194,7 +194,7 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Phase 3 reveal text */}
-        <motion.div className="absolute z-[3] text-center section-container" style={{ opacity: revealOpacity, y: revealY }}>
+        <motion.div className="absolute z-3 text-center section-container" style={{ opacity: revealOpacity, y: revealY }}>
           <h2 className="heading-display text-primary" style={{ fontSize: "clamp(24px, 4vw, 44px)" }}>
             Ce que nous créons pour vous
           </h2>

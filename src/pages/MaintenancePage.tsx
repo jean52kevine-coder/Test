@@ -42,7 +42,7 @@ const FAQItem = ({ faq, index }: { faq: { q: string; a: string }; index: number 
         <GlowingEffect spread={30} glow proximity={50} inactiveZone={0.01} borderWidth={2} disabled={false} />
         <button onClick={() => setOpen(!open)} className="relative z-10 w-full text-left rounded-xl p-5 flex items-center justify-between" style={{ backgroundColor: "hsl(var(--card-dark))", border: "1px solid hsl(var(--border-green))" }}>
           <h3 className="font-display font-bold text-foreground pr-4">{faq.q}</h3>
-          <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }} className="text-primary flex-shrink-0">▼</motion.span>
+          <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }} className="text-primary shrink-0">▼</motion.span>
         </button>
       </div>
       <motion.div initial={false} animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
@@ -98,7 +98,7 @@ const MaintenancePage = () => {
     {/* Hero */}
     <section className="relative min-h-[65vh] flex items-center overflow-hidden bg-[#0a0f0a]">
       <HeroBackground variant="circuit" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-1" />
       <div className="relative z-10 container mx-auto px-6 py-12 md:py-24 flex flex-col md:flex-row items-center gap-10">
         <div className="text-center lg:text-left flex-1">
           <BlurReveal>
@@ -211,7 +211,7 @@ const MaintenancePage = () => {
               <motion.div key={i} variants={itemVariants} className="relative">
                 {f.highlighted ? (
                   <div className="relative flex flex-col">
-                    <div className="flex justify-center mb-[-1px]">
+                    <div className="flex justify-center -mb-px">
                       <div className="inline-flex items-center gap-2 bg-[#0a0f0a] border border-[#1DB954]/60 rounded-t-xl px-5 py-2 shadow-[0_0_20px_rgba(29,185,84,0.25)]">
                         <span className="relative flex h-2 w-2 shrink-0">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1DB954] opacity-70" />
@@ -223,7 +223,7 @@ const MaintenancePage = () => {
                       </div>
                     </div>
                     <div className="border-2 border-[#1DB954]/50 rounded-2xl rounded-tl-none bg-[#0d1a0d] p-5 md:p-8 flex flex-col gap-6 shadow-[0_0_60px_rgba(29,185,84,0.12)] hover:shadow-[0_0_80px_rgba(29,185,84,0.18)] transition-shadow duration-300 group">
-                      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
+                      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
                       <div className="relative">
                         <p className="text-white/50 text-sm font-medium uppercase tracking-widest mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                           {f.name}
@@ -233,7 +233,7 @@ const MaintenancePage = () => {
                           <span className="text-white/40 text-base mb-2">/mois</span>
                         </div>
                       </div>
-                      <div className="h-px bg-gradient-to-r from-transparent via-[#1DB954]/20 to-transparent" />
+                      <div className="h-px bg-linear-to-r from-transparent via-[#1DB954]/20 to-transparent" />
                       <ul className="flex flex-col gap-3 flex-1">
                         {f.features.map((feat, j) => (
                           <li key={j} className="flex items-start gap-3 text-sm text-white/65" style={{ fontFamily: "'DM Sans', sans-serif" }}><Check size={14} className="text-[#1DB954] mt-0.5 shrink-0" strokeWidth={2.5} />{feat}</li>
@@ -247,7 +247,7 @@ const MaintenancePage = () => {
                   </div>
                 ) : (
                 <div className="relative w-full rounded-2xl p-5 md:p-8 flex flex-col gap-6 transition-all duration-300 group bg-[#0d130d] border border-[#1a2e1a] hover:border-[#1DB954]/30 hover:shadow-[0_0_40px_rgba(29,185,84,0.08)]">
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
                   <div className="relative">
                     <p className="text-white/50 text-sm font-medium uppercase tracking-widest mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                       {f.name}
@@ -257,7 +257,7 @@ const MaintenancePage = () => {
                       <span className="text-white/40 text-base mb-2">/mois</span>
                     </div>
                   </div>
-                  <div className="h-px bg-gradient-to-r from-transparent via-[#1DB954]/20 to-transparent" />
+                  <div className="h-px bg-linear-to-r from-transparent via-[#1DB954]/20 to-transparent" />
                   <ul className="flex flex-col gap-3 flex-1">
                     {f.features.map((feat, j) => (
                       <li key={j} className="flex items-start gap-3 text-sm text-white/65" style={{ fontFamily: "'DM Sans', sans-serif" }}><Check size={14} className="text-[#1DB954] mt-0.5 shrink-0" strokeWidth={2.5} />{feat}</li>

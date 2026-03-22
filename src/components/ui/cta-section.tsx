@@ -32,7 +32,7 @@ export const CtaSection = ({
       <div className="section-container">
         <ScaleSection>
           <div className="relative overflow-hidden rounded-2xl border border-[#1a2e1a] bg-[#0d130d] p-8 md:p-16">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1DB954]/8 via-transparent to-[#1DB954]/8" />
+            <div className="absolute inset-0 bg-linear-to-br from-[#1DB954]/8 via-transparent to-[#1DB954]/8" />
             <div className="relative z-10 flex flex-col items-center gap-8 md:flex-row md:gap-16">
               <div className="flex-1 text-center md:text-left">
                 <BlurReveal>
@@ -51,21 +51,21 @@ export const CtaSection = ({
                     className="group relative inline-flex items-center gap-2.5 bg-[#1DB954] hover:bg-[#17a349] text-black font-bold px-7 py-4 rounded-xl transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(29,185,84,0.4)] active:scale-[0.98] overflow-hidden text-sm"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12" />
                     <span className="relative">{buttonText}</span>
                     <ArrowRight size={16} className="relative transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
                   </Link>
                 </BlurReveal>
               </div>
 
-              <BlurReveal delay={0.2} direction="right" className="flex-shrink-0">
+              <BlurReveal delay={0.2} direction="right" className="shrink-0">
                 <ul className="grid grid-cols-1 gap-3">
                   {items.map((item, idx) => (
                     <li
                       key={idx}
                       className="flex items-center gap-3 text-sm text-muted-foreground"
                     >
-                      <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                      <Check className="h-4 w-4 text-primary shrink-0" />
                       {item}
                     </li>
                   ))}

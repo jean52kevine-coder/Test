@@ -21,14 +21,14 @@ const ctaPrimary =
   "group relative inline-flex items-center justify-center gap-2.5 bg-[#1DB954] hover:bg-[#17a349] text-black font-bold px-7 py-4 rounded-xl transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(29,185,84,0.4)] active:scale-[0.98] overflow-hidden text-sm";
 
 const ctaSecondary =
-  "group inline-flex items-center justify-center gap-2.5 border border-white/15 hover:border-[#1DB954]/40 text-white/70 hover:text-white font-medium px-7 py-4 rounded-xl transition-all duration-200 hover:bg-white/[0.03] text-sm backdrop-blur-sm";
+  "group inline-flex items-center justify-center gap-2.5 border border-white/15 hover:border-[#1DB954]/40 text-white/70 hover:text-white font-medium px-7 py-4 rounded-xl transition-all duration-200 hover:bg-white/3 text-sm backdrop-blur-xs";
 
 export function PricingWithChart() {
   return (
     <div className="w-full max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-stretch">
         <div className="relative lg:col-span-2 bg-[#0d130d] border border-[#1a2e1a] rounded-2xl p-8 flex flex-col gap-6 transition-all duration-300 hover:border-[#1DB954]/30 hover:shadow-[0_0_40px_rgba(29,185,84,0.08)] group">
-          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
           <div className="relative">
             <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 bg-[#1DB954]/10">
               <Globe className="text-[#1DB954]" size={20} />
@@ -41,7 +41,7 @@ export function PricingWithChart() {
             </div>
             <p className="text-white/35 text-xs mt-1">Paiement unique · Idéal pour artisans et indépendants</p>
           </div>
-          <div className="h-px bg-gradient-to-r from-transparent via-[#1DB954]/20 to-transparent" />
+          <div className="h-px bg-linear-to-r from-transparent via-[#1DB954]/20 to-transparent" />
           <ul className="flex flex-col gap-3 flex-1">
             {[
               "Design 100% sur-mesure",
@@ -66,7 +66,7 @@ export function PricingWithChart() {
 
         <div className="relative lg:col-span-3 flex flex-col">
           <div className="relative flex flex-col">
-            <div className="flex justify-center mb-[-1px]">
+            <div className="flex justify-center -mb-px">
               <div className="inline-flex items-center gap-2 bg-[#0a0f0a] border border-[#1DB954]/60 rounded-t-xl px-5 py-2 shadow-[0_0_20px_rgba(29,185,84,0.25)]">
                 <span className="relative flex h-2 w-2 shrink-0">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1DB954] opacity-70" />
@@ -78,7 +78,7 @@ export function PricingWithChart() {
               </div>
             </div>
           <div className="relative w-full border-2 border-[#1DB954]/50 rounded-2xl rounded-tl-none bg-[#0d1a0d] p-8 flex flex-col gap-6 shadow-[0_0_60px_rgba(29,185,84,0.12)] hover:shadow-[0_0_80px_rgba(29,185,84,0.18)] transition-shadow duration-300 group">
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#1DB954]/6 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br from-[#1DB954]/6 via-transparent to-transparent pointer-events-none" />
             <div className="relative flex flex-col md:flex-row gap-6">
               <div className="flex-1">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 bg-[#1DB954]/10">
@@ -96,7 +96,7 @@ export function PricingWithChart() {
                 <ROIChart />
               </div>
             </div>
-            <div className="h-px bg-gradient-to-r from-transparent via-[#1DB954]/20 to-transparent" />
+            <div className="h-px bg-linear-to-r from-transparent via-[#1DB954]/20 to-transparent" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 "Boutique complète",
@@ -111,14 +111,14 @@ export function PricingWithChart() {
                 "Support dédié",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2.5 text-sm text-white/65" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                  <CheckCircleIcon className="text-[#1DB954] flex-shrink-0" size={16} />
+                  <CheckCircleIcon className="text-[#1DB954] shrink-0" size={16} />
                   {item}
                 </div>
               ))}
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <Link to="/contact?service=ecommerce" className={ctaPrimary} style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12" />
                 <span className="relative">Choisir E-commerce</span>
                 <ArrowRight size={16} className="relative transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
               </Link>

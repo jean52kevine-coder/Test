@@ -39,7 +39,7 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0f0a]/90 backdrop-blur-md border-b border-white/5">
         <div className="section-container h-16 md:h-20 flex items-center justify-between gap-3">
           <Link to="/" className="flex items-center h-full py-1 transition-transform duration-300 hover:scale-105">
-            <AlteraLogo size="md" className="max-h-[3.5rem] md:max-h-[4.5rem]" />
+            <AlteraLogo size="md" className="max-h-14 md:max-h-18" />
           </Link>
 
           <div className="flex items-center gap-2">

@@ -14,7 +14,7 @@ const testimonials = [
 
 const Card = ({ t }: { t: typeof testimonials[0] }) => (
   <motion.div
-    className="relative flex-shrink-0 rounded-2xl min-w-[320px] max-w-[360px] group"
+    className="relative shrink-0 rounded-2xl min-w-[320px] max-w-[360px] group"
     whileHover={{ y: -8, scale: 1.02 }}
     transition={{ duration: 0.3 }}
   >
@@ -64,11 +64,11 @@ const TestimonialsCarousel = () => (
   >
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <div
-        className="absolute w-full h-[1px] top-0"
+        className="absolute w-full h-px top-0"
         style={{ background: "linear-gradient(90deg, transparent, rgba(29,185,84,0.2), transparent)" }}
       />
       <div
-        className="absolute w-full h-[1px] bottom-0"
+        className="absolute w-full h-px bottom-0"
         style={{ background: "linear-gradient(90deg, transparent, rgba(29,185,84,0.2), transparent)" }}
       />
     </div>

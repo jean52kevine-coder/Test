@@ -138,7 +138,7 @@ const ROISimulator = () => {
             <div className="space-y-6 mb-8">
               <div>
                 <label className="font-dm font-medium text-white text-sm block mb-2">Votre secteur</label>
-                <select value={secteur} onChange={(e) => setSecteur(e.target.value)} className="w-full rounded-lg px-4 py-3 text-sm font-dm bg-background border border-border text-foreground focus:border-primary focus:outline-none">
+                <select value={secteur} onChange={(e) => setSecteur(e.target.value)} className="w-full rounded-lg px-4 py-3 text-sm font-dm bg-background border border-border text-foreground focus:border-primary focus:outline-hidden">
                   {secteurs.map((s) => <option key={s.label} value={s.label}>{s.label}</option>)}
                 </select>
               </div>
@@ -189,7 +189,7 @@ const ROISimulator = () => {
             <p className="text-white/40 text-xs font-dm text-center mb-8">Estimation indicative basée sur des moyennes sectorielles.</p>
 
             <div className="text-center">
-              <button onClick={() => navigate("/contact?service=vitrine")} className="group relative inline-flex items-center gap-2.5 bg-[#1DB954] hover:bg-[#17a349] text-black font-bold px-7 py-4 rounded-xl transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(29,185,84,0.4)] active:scale-[0.98] overflow-hidden text-sm" style={{fontFamily:"'DM Sans', sans-serif"}}><div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" /><span className="relative">Obtenir mon site maintenant</span><ArrowRight size={16} className="relative transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} /></button>
+              <button onClick={() => navigate("/contact?service=vitrine")} className="group relative inline-flex items-center gap-2.5 bg-[#1DB954] hover:bg-[#17a349] text-black font-bold px-7 py-4 rounded-xl transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(29,185,84,0.4)] active:scale-[0.98] overflow-hidden text-sm" style={{fontFamily:"'DM Sans', sans-serif"}}><div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12" /><span className="relative">Obtenir mon site maintenant</span><ArrowRight size={16} className="relative transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} /></button>
             </div>
           </div>
         </motion.div>
@@ -233,7 +233,7 @@ const PourquoiPage = () => {
     <StructuredData data={articleData} />
     <section className="relative min-h-[65vh] flex items-center overflow-hidden bg-[#0a0f0a]">
       <HeroBackground variant="dataflow" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0a0f0a]/20 via-transparent to-[#0a0f0a]/80 pointer-events-none z-1" />
       <div className="relative z-10 container mx-auto px-6 py-12 md:py-24 text-center">
         <BlurReveal>
           <h1
@@ -287,13 +287,13 @@ const PourquoiPage = () => {
                 <div className="relative rounded-xl">
                   <GlowingEffect spread={30} glow proximity={50} inactiveZone={0.01} borderWidth={2} variant="white" disabled={false} />
                   <div className="relative z-10 flex items-center gap-3 bg-destructive/10 rounded-xl p-4">
-                    <XCircle className="text-destructive flex-shrink-0" size={20} /><span className="text-sm text-foreground">{row.sans}</span>
+                    <XCircle className="text-destructive shrink-0" size={20} /><span className="text-sm text-foreground">{row.sans}</span>
                   </div>
                 </div>
                 <div className="relative rounded-xl">
                   <GlowingEffect spread={30} glow proximity={50} inactiveZone={0.01} borderWidth={2} disabled={false} />
                   <div className="relative z-10 flex items-center gap-3 bg-primary/10 rounded-xl p-4">
-                    <CheckCircle className="text-primary flex-shrink-0" size={20} /><span className="text-sm text-foreground">{row.avec}</span>
+                    <CheckCircle className="text-primary shrink-0" size={20} /><span className="text-sm text-foreground">{row.avec}</span>
                   </div>
                 </div>
               </div>

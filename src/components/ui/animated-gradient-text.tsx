@@ -10,7 +10,7 @@ export function AnimatedGradientText({ children, className }: AnimatedGradientTe
   return (
     <span
       className={cn(
-        "inline-block bg-gradient-to-r from-[#1DB954] via-[#4ade80] to-[#1DB954] bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-text",
+        "inline-block bg-linear-to-r from-[#1DB954] via-[#4ade80] to-[#1DB954] bg-size-[200%_auto] bg-clip-text text-transparent animate-gradient-text",
         className
       )}
     >

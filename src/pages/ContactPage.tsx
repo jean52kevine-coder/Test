@@ -222,7 +222,7 @@ const ContactPage = () => {
           </span>
           <h1 className="heading-display text-2xl sm:text-4xl md:text-6xl lg:text-7xl mb-4">
             Parlons de votre{" "}
-            <span className="bg-gradient-to-r from-primary via-emerald-400 to-primary bg-clip-text text-transparent">projet</span>
+            <span className="bg-linear-to-r from-primary via-emerald-400 to-primary bg-clip-text text-transparent">projet</span>
           </h1>
           <p className="font-dm text-base md:text-lg text-muted-foreground max-w-xl mx-auto">
             Réponse garantie sous 24h · Échange par email ou par appel · Devis gratuit
@@ -265,7 +265,7 @@ const ContactPage = () => {
                     { icon: Clock, text: "Réponse sous 24h" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                         <item.icon className="text-primary" size={16} />
                       </div>
                       <span className="font-dm text-sm text-foreground/80">{item.text}</span>
@@ -317,7 +317,7 @@ const ContactPage = () => {
                           {s.label}
                         </span>
                         {i < steps.length - 1 && (
-                          <div className="hidden sm:block w-12 lg:w-20 h-[1px] mx-2" style={{ backgroundColor: i < step ? "hsl(145,63%,42%)" : "#1a2e1a" }} />
+                          <div className="hidden sm:block w-12 lg:w-20 h-px mx-2" style={{ backgroundColor: i < step ? "hsl(145,63%,42%)" : "#1a2e1a" }} />
                         )}
                       </button>
                     ))}
@@ -406,7 +406,7 @@ const ContactPage = () => {
                             placeholder="Parlez-nous de votre activité et de vos objectifs…"
                             value={form.message}
                             onChange={(e) => { update("message", e.target.value); setCharCount(e.target.value.length); setMessageEditedByUser(true); }}
-                            className="w-full px-4 py-3.5 rounded-xl bg-background/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-dm resize-none"
+                            className="w-full px-4 py-3.5 rounded-xl bg-background/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-hidden focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-dm resize-none"
                           />
                         </div>
 
@@ -495,7 +495,7 @@ const InputField = ({ label, placeholder, value, onChange, type = "text", state 
         onChange(e.target.value);
         onTouched?.();
       }}
-      className="w-full px-4 py-3.5 rounded-xl bg-background/50 border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-dm"
+      className="w-full px-4 py-3.5 rounded-xl bg-background/50 border text-foreground placeholder:text-muted-foreground focus:outline-hidden focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-dm"
       style={{
         borderColor: state === "invalid" ? "#ef4444" : state === "valid" ? "#1DB954" : "",
       }}
@@ -520,7 +520,7 @@ const ChipButton = ({ label, selected, onClick }: { label: string; selected: boo
 
 const SummaryRow = ({ label, value }: { label: string; value: string }) => (
   <div className="flex gap-4 py-2.5" style={{ borderBottom: "1px solid #1a2e1a" }}>
-    <span className="font-dm text-sm text-muted-foreground w-20 flex-shrink-0">{label}</span>
+    <span className="font-dm text-sm text-muted-foreground w-20 shrink-0">{label}</span>
     <span className="font-dm text-sm text-foreground">{value}</span>
   </div>
 );

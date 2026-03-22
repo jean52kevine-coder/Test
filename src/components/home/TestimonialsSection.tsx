@@ -22,7 +22,7 @@ const TestimonialsSection = () => (
   <section className="py-24 relative overflow-hidden">
     {/* Background glow */}
     <div className="absolute inset-0 z-0">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0a] via-[#0d130d]/70 to-[#0a0f0a]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0a0f0a] via-[#0d130d]/70 to-[#0a0f0a]" />
       <div
         className="absolute inset-0"
         style={{ background: "linear-gradient(180deg, hsl(var(--background)) 0%, transparent 20%, transparent 80%, hsl(var(--background)) 100%)" }}
@@ -43,7 +43,7 @@ const TestimonialsSection = () => (
         </h2>
       </BlurReveal>
 
-      <div className="flex justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[600px] overflow-hidden">
+      <div className="flex justify-center gap-6 mask-[linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[600px] overflow-hidden">
         <TestimonialsColumn testimonials={col1} duration={15} className="hidden md:block" />
         <TestimonialsColumn testimonials={col2} duration={19} />
         <TestimonialsColumn testimonials={col3} duration={17} className="hidden lg:block" />

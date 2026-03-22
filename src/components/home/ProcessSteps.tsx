@@ -68,7 +68,7 @@ const ProcessSteps = () => {
           <div className="md:hidden space-y-4 mb-8">
             {steps.map((s, i) => (
               <button key={i} onClick={() => setActive(i)} className="flex items-center gap-4 w-full text-left">
-                <span className="heading-display text-2xl flex-shrink-0 transition-colors" style={{ color: i === active ? "hsl(var(--primary))" : "rgba(255,255,255,0.2)" }}>
+                <span className="heading-display text-2xl shrink-0 transition-colors" style={{ color: i === active ? "hsl(var(--primary))" : "rgba(255,255,255,0.2)" }}>
                   {s.num}
                 </span>
                 <span className="font-dm text-sm" style={{ color: i === active ? "#fff" : "rgba(255,255,255,0.45)" }}>{s.title}</span>

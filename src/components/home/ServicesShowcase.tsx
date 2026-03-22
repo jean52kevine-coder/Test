@@ -96,7 +96,7 @@ const ServicesShowcase = () => (
                 <ul className="space-y-2 mb-6">
                   {c.bullets.map((b, j) => (
                     <li key={j} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Check className="text-primary flex-shrink-0" size={14} />
+                      <Check className="text-primary shrink-0" size={14} />
                       {b}
                     </li>
                   ))}

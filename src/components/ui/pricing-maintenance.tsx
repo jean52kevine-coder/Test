@@ -94,7 +94,7 @@ export function PricingMaintenance() {
                   : "bg-[#0d130d] border border-[#1a2e1a] hover:border-[#1DB954]/30 hover:shadow-[0_0_40px_rgba(29,185,84,0.08)]"
               )}
             >
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br from-[#1DB954]/4 via-transparent to-transparent pointer-events-none" />
 
               <div className="relative">
                 <p className="text-white/50 text-sm font-medium uppercase tracking-widest mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
@@ -114,7 +114,7 @@ export function PricingMaintenance() {
                 <p className="text-white/35 text-xs mt-1">{plan.description}</p>
               </div>
 
-              <div className="h-px bg-gradient-to-r from-transparent via-[#1DB954]/20 to-transparent" />
+              <div className="h-px bg-linear-to-r from-transparent via-[#1DB954]/20 to-transparent" />
 
               <ul className="flex flex-col gap-3 flex-1">
                 {plan.features.map((feature, idx) => (

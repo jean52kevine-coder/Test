@@ -52,7 +52,7 @@ const DistinguishSection = () => (
                   transition={{ delay: i * 0.12 + 0.15, duration: 0.4 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(239,68,68,0.08)" }}>
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "rgba(239,68,68,0.08)" }}>
                     <item.icon size={18} style={{ color: "rgba(239,68,68,0.7)" }} />
                   </div>
                   <div>
@@ -83,7 +83,7 @@ const DistinguishSection = () => (
                     transition={{ delay: i * 0.12 + 0.15, duration: 0.4 }}
                     className="flex items-start gap-4"
                   >
-                    <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "hsl(var(--primary) / 0.1)" }}>
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "hsl(var(--primary) / 0.1)" }}>
                       <item.icon size={18} className="text-primary" />
                     </div>
                     <div>

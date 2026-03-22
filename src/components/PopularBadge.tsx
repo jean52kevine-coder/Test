@@ -1,7 +1,7 @@
 const PopularBadge = () => (
   <div className="relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full overflow-hidden border border-[#1DB954]/40">
     <div
-      className="absolute inset-0 bg-gradient-to-r from-[#1DB954]/15 via-[#1DB954]/25 to-[#1DB954]/15 animate-pulse"
+      className="absolute inset-0 bg-linear-to-r from-[#1DB954]/15 via-[#1DB954]/25 to-[#1DB954]/15 animate-pulse"
       style={{ animationDuration: '2s' }}
     />
 

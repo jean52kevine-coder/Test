@@ -150,26 +150,26 @@ const GlowingEffect = memo(
           }
           className={cn(
             "pointer-events-none absolute -inset-px rounded-[inherit] opacity-100 transition-opacity duration-300",
-            glow ? "opacity-100" : "opacity-[var(--active)]",
-            disabled && "!hidden"
+            glow ? "opacity-100" : "opacity-(--active)",
+            disabled && "hidden!"
           )}
         >
           <div
             className={cn(
-              "absolute inset-[calc(-1*var(--glowingeffect-border-width))] rounded-[inherit] border-[length:var(--glowingeffect-border-width)] border-solid border-transparent",
+              "absolute inset-[calc(-1*var(--glowingeffect-border-width))] rounded-[inherit] border-(length:--glowingeffect-border-width) border-solid border-transparent",
               "[background-clip:padding-box,border-box]",
               "[background-origin:padding-box,border-box]",
               "[background:linear-gradient(hsl(var(--card-dark)),hsl(var(--card-dark)))_padding-box,var(--gradient)_border-box]",
               "mask-composite-exclude",
-              "[mask-composite:exclude]",
+              "mask-exclude",
               "[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]",
-              blur > 0 && "blur-[var(--blur)]",
+              blur > 0 && "blur-(--blur)",
               className,
-              disabled && "!hidden"
+              disabled && "hidden!"
             )}
           >
             <div
-              className="absolute inset-[calc(-1*var(--spread)*1px)] rounded-[inherit] opacity-[var(--active)]"
+              className="absolute inset-[calc(-1*var(--spread)*1px)] rounded-[inherit] opacity-(--active)"
               style={{
                 background: `radial-gradient(circle, hsl(145 63% 42% / 0.15), transparent 70%)`,
               }}
